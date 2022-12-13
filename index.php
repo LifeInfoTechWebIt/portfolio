@@ -10,7 +10,34 @@ if (isset($_POST['contact-us'])) {
     $insert_contact = "INSERT INTO `contact`(`name`, `phone`, `email`, `subject`, `msg`)
      VALUES ('$name','$phone','$email','$subject','$message')";
 
+    $sub = "New Contact Data";
+    $receiver = $mail_id;
+    $body = "
+      <table>
+           <tr>
+              <th style='padding:5px'>Name</th>
+              <td style='padding:5px'>$name</td>
+           </tr>
+           <tr>
+              <th style='padding:5px'>Phone</th>
+              <td style='padding:5px'>$phone</td>
+           </tr>
+           <tr>
+              <th style='padding:5px'>Email</th>
+              <td style='padding:5px'>$email</td>
+           </tr>
+           <tr>
+              <th style='padding:5px'>Subject</th>
+              <td style='padding:5px'>$subject</td>
+           </tr>
+           <tr>
+              <th style='padding:5px'>Message</th>
+              <td style='padding:5px'>$message</td>
+           </tr>
+      </table>
+    ";
     if (mysqli_query($conn, $insert_contact)) {
+        send_mail($receiver, $body, $sub);
         echo "<script>alert('Contact form submitted successfully')
        window.location.href = 'index.php';
      </script>";
@@ -18,7 +45,7 @@ if (isset($_POST['contact-us'])) {
         echo "<script>alert('Form not submitted')
     window.location.href = 'index.php';
   </script>";
-    }
+    }  
 }
 
 ?>

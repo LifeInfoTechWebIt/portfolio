@@ -12,7 +12,7 @@
     require 'PHPMailer/src/PHPMailer.php';
     require 'PHPMailer/src/SMTP.php';
 
- 
+
 
     function get_state()
     {
@@ -63,7 +63,7 @@
 
 
 
-
+    $mail_id = "lifeinfotechitservices@gmail.com";
 
     function send_mail($receiver, $body, $sub)
     {
@@ -71,14 +71,14 @@
         // $mail->SMTPDebug=3;
         $mail->IsSMTP();
         $mail->SMTPAuth = true;
-        $mail->Host = "smtp.gmail.com";
+        $mail->Host = "smtp.hostinger.com";
         $mail->Port = "465";
         $mail->IsHTML(true);
         $mail->CharSet = 'UTF-8';
-        $mail->Username = "infoxjob24x7@gmail.com";
-        $mail->Password = "vvqiegxnlcjobpfw";
+        $mail->Username = "info@snehaitfreelancer.com";
+        $mail->Password = "9u-rP@)rV78Ygu%7";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->SetFrom("infoxjob24x7@gmail.com", "Jeetdigital");
+        $mail->SetFrom("info@snehaitfreelancer.com", "Sneha It Freelancer");
         $mail->Subject = $sub;
         $mail->Body = $body;
         $mail->AddAddress($receiver);
@@ -93,6 +93,36 @@
             return true;
         }
     }
+
+
+    // function send_mail($receiver, $body, $sub)
+    // {
+    //     $mail = new PHPMailer();
+    //     // $mail->SMTPDebug=3;
+    //     $mail->IsSMTP();
+    //     $mail->SMTPAuth = true;
+    //     $mail->Host = "smtp.gmail.com";
+    //     $mail->Port = "465";
+    //     $mail->IsHTML(true);
+    //     $mail->CharSet = 'UTF-8';
+    //     $mail->Username = "infoxjob24x7@gmail.com";
+    //     $mail->Password = "vvqiegxnlcjobpfw";
+    //     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    //     $mail->SetFrom("infoxjob24x7@gmail.com", "Jeetdigital");
+    //     $mail->Subject = $sub;
+    //     $mail->Body = $body;
+    //     $mail->AddAddress($receiver);
+    //     $mail->SMTPOptions = array('ssl' => array(
+    //         'verify_peer' => false,
+    //         'verify_peer_name' => false,
+    //         'allow_self_signed' => false
+    //     ));
+    //     if (!$mail->Send()) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // }
 
     function send_message($mobile, $message)
     {

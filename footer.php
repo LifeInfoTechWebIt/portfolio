@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <div class="footer-area text-center">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="assets/img/image2.png" alt="logo" height="120px" width="115px">
                             </a>
                         </div>
