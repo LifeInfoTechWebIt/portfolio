@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(194, 194, 194);
+    border-radius: 5px;
+}
+
+/* -------------------------- Drop down menu style start -------------------  */
+.dropdown-menu i {
+    margin-right: 5px;
+}
+
+.dropdown-menu .fa-edit {
+    color: #4d94ff;
+}
+
+.dropdown-menu .fa-eye {
+    color: #4d94ff;
+}
+
+.dropdown-menu .fa-book-medical {
+    color: #4d94ff;
+}
+
+.dropdown-menu .fa-download {
+    color: #4d94ff;
+}
+
+.dropdown-menu .fa-user {
+    color: #4d94ff;
+}
+
+.dropdown-menu .fa-trash-alt {
+    color: #ff3333;
+}
+
+.dropdown-menu .fa-user-plus {
+    color: #4d94ff;
+}
+
+/* -------------------------- Drop down menu style End-------------------  */
+
+/* ---------------------------- Password Eye start-----------------------------  */
+.pass-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(-10px, -50%);
+}
+
+
+
+/* ---------------------------- Password Eye end-----------------------------  */
+
+
+/* ----------------------------- Profile image viewer start---------------- */
+
+#image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+.image-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 700px;
+    max-height: 100vh;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.image-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+#profile-image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+.profile-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 700px;
+    max-height: 100vh;
+}
+
+.profile-modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+#profile-image-viewer .profile-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#profile-image-viewer .profile-close:hover,
+#profile-image-viewer .profile-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pagination-btn {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.pagination-btn .pagi-btn {
+    border: none;
+    background-color: #4e72dfd3;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+ 
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: 0;
+    /* Divide value of min-width by 2 */
+    background-color: rgb(0, 191, 197);
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 99999999;
+    /* Add a z-index if needed */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+  
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+  
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+  
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+  
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .profile-modal-content {
+        max-width: 350px;
+    }
+}
+
+
+/* ----------------------------- Profile image viewer end---------------- */
+
+
+
+
+
+/* ---------------------------------- Academic Calendar End---------------- */
+/* ----------------------------------- For All ----------------------- */
+.internet-status {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    background-color: rgba(0, 0, 0, 0.76);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+.int-status-content {
+    max-width: 500px;
+    width: 100%;
+    transition: .4s;
+    animation: zoom .4s linear;
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+
+.pro-card {
+    position: relative;
+}
+
+.pro-card div {
+    transition: .5s;
+
+}
+
+.pro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: .5s;
+}
+
+.pro-card-warning::before {
+    background-color: #f6c23e
+}
+
+.pro-card-primary::before {
+    background-color: #4e73df
+}
+
+.pro-card-success::before {
+    background-color: #1cc88a
+}
+
+.pro-card-info::before {
+    background-color: #36b9cc
+}
+
+
+.pro-card:hover::before {
+    width: 100%;
+}
+
+.pro-card:hover div {
+    color: #FFFFFF !important;
+}
+
+
+.pro-add-card {
+    height: 300px;
+
+}
+
+.pro-add-card-body-primary {
+    overflow-y: auto;
+}
+
+.pro-add-card-body-primary::-webkit-scrollbar {
+    width: 5px;
+}
+
+.pro-add-card-body-primary::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #4e73df;
+}
+
+.pro-add-card-body-success {
+    overflow-y: auto;
+}
+
+.pro-add-card-body-success::-webkit-scrollbar {
+    width: 5px;
+}
+
+.pro-add-card-body-success::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #1cc88a;
+}
+
+.pro-add-card-body-info {
+    overflow-y: auto;
+}
+
+.pro-add-card-body-info::-webkit-scrollbar {
+    width: 5px;
+}
+
+.pro-add-card-body-info::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #36b9cc;
+}
+
+.pro-add-card-body-warning {
+    overflow-y: auto;
+}
+
+.pro-add-card-body-warning::-webkit-scrollbar {
+    width: 5px;
+}
+
+.pro-add-card-body-warning::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #f6c23e;
+}
+
+
+
+
+.pro-table tr td {
+    font-size: 13px;
+}
+
+.pro-table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.pro-table tr td a {
+    transition: .4s;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 8px 15px;
+    border-radius: 50px;
+
+}
+
+.pro-table-primary tr td a {
+    color: #4e73df;
+}
+
+.pro-table-primary tr td a:hover {
+    background-color: #4e73df;
+    color: #FFFFFF !important;
+}
+
+.pro-table-success tr td a {
+    color: #1cc88a;
+}
+
+.pro-table-success tr td a:hover {
+    background-color: #1cc88a;
+    color: #FFFFFF !important;
+}
+
+.pro-table-warning tr td a {
+    color: #f6c23e;
+}
+
+.pro-table-warning tr td a:hover {
+    background-color: #f6c23e;
+    color: #FFFFFF !important;
+}
+
+.pro-table-info tr td a {
+    color: #36b9cc;
+}
+
+.pro-table-info tr td a:hover {
+    background-color: #36b9cc;
+    color: #FFFFFF !important;
+}
+
+.img-priview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-priview img {
+    margin: 10px;
+}
+
+
+.textarea {
+    resize: none;
+}
+
+.label-color {
+    color: #008080;
+}
+
+.bg-color {
+    background-color: #008080;
+}
+
+.table-pro-pic {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.150);
+}
+
+.stu-profile-table {
+    font-size: 15px;
+}
+
+.stu-profile-table tr:nth-child(1) th {
+    padding: 0;
+}
+
+
+.tab-table-data tr td:nth-child(odd) {
+    color: #008080;
+    font-weight: 600;
+
+}
+
+.back-btn {
+    color: #36b9cc;
+    transition: .4s;
+}
+
+.back-btn:hover {
+    color: #f6c23e;
+}
+
+
+
+.multiple-select-box {
+    position: relative;
+}
+ .mul-sele-options input{
+    margin-right: 5px;
+ }
+.multiple-select-box label {
+    width: 100%;
+    cursor: pointer;
+}
+
+.mul-sele-options {
+    padding: 10px 20px;
+    height: 200px;
+    overflow: auto;
+}
+
+.mul-sele-options::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mul-sele-options::-webkit-scrollbar-thumb {
+    background-color: #797979;
+}
+
+.mul-sele-options label {
+    padding: 5px 10px;
+}
+
+.mul-sele-options label:hover {
+    background-color: #eee;
+}
+
+.sr-no{
+    max-width: 80px;
+    min-width: 50px;
+}
+ 
+.order-table tr td{
+    font-size: 13px;
+}
+.manage-sub-cat-ul{
+    /* background-color: #f2f2f2; */
+  
+}
+.manage-sub-cat-ul .nav-item:hover{
+background-color: #eee;
+}
+.manage-sub-cat-ul .nav-item .nav-link{
+  border-radius: 0;   
+}
+ 
+.sub-cat-ul li{
+      list-style: none;
+      padding: 0;
+}
+.sub-cat-ul li input{
+    margin-right: 10px;
+}
+.sub-cat-ul li .fa-trash-alt{
+    margin-right: 10px;   
+}
+.sub-cat-ul li label{
+    width: 100%;
+    padding: 5px 10px;
+    transition: .3s;
+}
+.sub-cat-ul li:hover > label{
+    background-color: #eee; 
+}
+
+
+/* --------------------------------- Media Query start----------------------- */
+
+@media screen and (max-width:768px) {
+    #academic_calendar_embed {
+        display: none;
+    }
+
+    #academic_calendar_down_btn {
+        display: block;
+    }
+
+    #profile-img-box {
+        height: 300px;
+    }
+}
+
+
+
+
+
+/* --------------------------------- Media Query End----------------------- */
