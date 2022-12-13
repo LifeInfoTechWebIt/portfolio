@@ -96,7 +96,7 @@ if (isset($_POST['contact-us'])) {
                             <div class="client-card m-0 p-0">
                                 <div class="row">
                                     <?php
-                                    if ($sub_cat_id != '') {
+                                    if ($url_sub_cat_id != '') {
                                         $get_portfolio = fetch_data('portfolio', '*', "sub_cat_id='$url_sub_cat_id' order by col_id desc");
                                     } else {
                                         $get_portfolio = fetch_data('portfolio', '*', "1 order by col_id desc");
