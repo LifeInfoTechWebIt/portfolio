@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Sneha Gupta Freelancer 15+ years of Experience PHP,Bootstrap,.NET,MVC.Web Design and Development</title>
+    <title>Sneha Gupta Freelancer 5+ years of Experience PHP,Bootstrap,.NET,MVC. Web Design and Development</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -86,7 +86,7 @@
                     </nav>
                     <!-- Start Header Right  -->
                     <div class="header-right">
-                        <a class="rn-btn" target="_blank" href="PAYMENT.HTML"><span>PAYMENT NOW</span></a>
+                        <a class="rn-btn" target="_blank" href="payment.php"><span>PAYMENT NOW</span></a>
                         <div class="hamberger-menu d-block d-xl-none">
                             <i id="menuBtn" class="feather-menu humberger-menu"></i>
                         </div>
@@ -110,13 +110,13 @@
             <div class="menu-top">
                 <div class="menu-header">
                     <a class="logo" href="index.html">
-                        <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio">
+                        <img src="assets/img/image2.png" alt="Personal Portfolio">
                     </a>
                     <div class="close-button">
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                <p class="discription">sneha gupta freelancer 15+ years of Experience PHP,Bootstrap,.NET,MVC.Web Design and Development.</p>
+                <p class="discription">sneha gupta freelancer 5+ years of Experience PHP,Bootstrap,.NET,MVC.Web Design and Development.</p>
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills onepagenav">
@@ -128,6 +128,7 @@
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="payment.php">Payment</a></li>
                 </ul>
                 <!-- social sharea area -->
                 <div class="social-share-style-1 mt--40">

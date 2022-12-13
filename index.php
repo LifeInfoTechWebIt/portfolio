@@ -79,7 +79,7 @@ if (isset($_POST['contact-us'])) {
                                 </h1>
 
                                 <div>
-                                    <p class="description">I have over 15+ years of Experience in web development.I
+                                    <p class="description">I have over 5+ years of Experience in web development.I
                                         work on latest technologies of web design and development and deliver the best. I aim to satisfy my client in all manners.I can do both Web Design and Development. I have excellent skills of Wordpress, PHP, Code Ignitor Framework, Mysql, HTML5, CSS3, Javascript, jquery,Bootstrap,.NET,MVC.I have good knowledge in project planning initiative, critical thinking and capable.it was a pleasure to work with us.
                                         <br> Thank you for looking into my profile. Looking forward to working with you,
                                     </p>
