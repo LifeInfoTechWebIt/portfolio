@@ -11,7 +11,7 @@ if (isset($_POST['update'])) {
     $title = realEscape('title');
     $cat_id = realEscape('cat_id');
     $url = realEscape('url');
-    $description = realEscape('description');
+    $description = htmlentities(realEscape('description'));
     $mainpic = $_FILES['mainpic']['name'];
     $mainpic_tmp = $_FILES['mainpic']['tmp_name'];
 
@@ -102,8 +102,8 @@ if (isset($_POST['update'])) {
                             </div>
                             <div class="col-lg-12 col-12 mb-3">
                                 <label class="form-label label-color font-weight-bold">Description</label>
-                                <textarea name="description" class="form-control" required>
-                                <?php echo $get_data_f[0]['des'] ?> 
+                                <textarea name="description" id="editor" class="form-control" required>
+                                <?php echo html_entity_decode($get_data_f[0]['des']) ?> 
                                </textarea>
                             </div>
 

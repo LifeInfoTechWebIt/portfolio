@@ -12,8 +12,10 @@ if (isset($_POST['add'])) {
 
     $new_name = new_fileName($mainpic);
 
+    $html_des = htmlentities($description);
+
     $insert_col = "`cat_id`,`sub_cat_id`,`title`, `des`, `img`, `url`";
-    $insert_val = "'$cat_id','$sub_cat_id','$title','$description','$new_name','$url' ";
+    $insert_val = "'$cat_id','$sub_cat_id','$title','$html_des','$new_name','$url' ";
 
     if (insert('portfolio', $insert_col, $insert_val)) {
         move_uploaded_file($mainpic_tmp, '../assets/img/portfolio/' . $new_name);
@@ -66,7 +68,7 @@ if (isset($_POST['add'])) {
                             </div>
                             <div class="col-lg-12 col-12 mb-3">
                                 <label class="form-label label-color font-weight-bold">Description</label>
-                                <textarea name="description" class="form-control" required>
+                                <textarea id="editor" name="description" class="form-control" required>
                                </textarea>
                             </div>
                             <div class="col-12 mb-3 text-center">

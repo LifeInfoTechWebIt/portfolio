@@ -9,7 +9,7 @@
       
    $img = $get_f[0]['img'];
    $category = get_category_name($get_f[0]['cat_id']);
-   $des = $get_f[0]['des'];
+   $des = html_entity_decode( $get_f[0]['des'] ); 
    $url = $get_f[0]['url'];
    $title = $get_f[0]['title'];
    echo "
